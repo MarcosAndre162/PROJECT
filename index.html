@@ -8,9 +8,9 @@
     <title>Pacote de Batidas de Música - Rap e Trap</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="index"> <!-- Adicionei o id aqui -->
     <header>
-        <h1>PACK DE BEATS ‘’ HYPERION ‘’</h1>
+        <h1>PACK DE BEATS "HYPERION"</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="product.html">Detalhes</a>
@@ -18,14 +18,7 @@
         </nav>
     </header>
     <main>
-        <section id="intro">
-            <h2>O que é o Pack de Beats Hyperion?</h2>
-            <p>O Pack de Beats Hyperion é um pack exclusivo que contém 50 beats profissionais, 
-               com os estilos mais ouvidos do momento: Trap e Drill. Cada beat foi cuidadosamente 
-               produzido para oferecer uma variedade impressionante de sentimentos e inspirações, 
-               garantindo que você encontre o beat perfeito para cada projeto da sua carreira.</p>
-            <button onclick="window.location.href='product.html'">Comprar Agora</button>
-        </section>
+        
         <section id="samples">
             <h2>Amostras</h2>
             <audio controls>
@@ -36,6 +29,17 @@
                 <source src="sample2.mp3" type="audio/mp3">
                 Seu navegador não suporta o elemento de áudio.
             </audio>
+            <audio controls>
+                <source src="sample1.mp3" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+            <audio controls>
+                <source src="sample2.mp3" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+            <section id="intro">
+                <button onclick="window.location.href='product.html'">Saiba mais</button>
+            </section>
         </section>
     </main>
     <footer>
