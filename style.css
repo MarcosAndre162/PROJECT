@@ -76,19 +76,41 @@ button:hover {
     margin-top: 50px; /* Ajuste conforme necessário */
 }
 
-section#samples {
-    text-align: center;
+#samples {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 40px;
-    
-    
-
 }
 
-audio {
-    margin: 10px;
-    width: 40%;
-    background-color: #8fa9b6;
+.beat-sample {
+    width: 60%; /* Define a largura de cada bloco */
+    
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: left; /* Alinha o texto à esquerda */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
+
+.beat-sample h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.beat-sample p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.beat-sample audio {
+    width: 100%; /* Faz o áudio ocupar toda a largura do bloco */
+    height: 40px;
+    margin-top: 10px;
+}
+
 
 /* Melhorando o formulário de contato */
 form input, form textarea {
@@ -113,16 +135,42 @@ form button:hover {
     color: #fff;
 }
 
-/* Estilo para o footer */
 footer {
     background-color: #1c1c1c;
+    color: #fff;
+    padding: 30px 0; /* Espaçamento interno superior e inferior */
+    min-height: 100px; /* Altura mínima do rodapé */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #427eff;
+}
+
+footer p {
+    margin: 0;
     color: #f4f4f4;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
