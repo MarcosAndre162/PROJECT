@@ -10,26 +10,38 @@
 </head>
 <body>
     <header>
-        <h1>PACK DE BEATS "HYPERION"</h1>
+        <h1>Central Hit</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="product.html">Detalhes</a>
+            <a href="index.html">Inicio</a>
             <a href="contact.html">Contato</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown()">Packs &#9662;</button> <!-- Botão com a setinha -->
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="pack-hyperion.html">Pack de Beats Hyperion</a>
+                    <!-- Adicione mais pacotes futuramente -->
+                </div>
+            </div>
         </nav>
+        
+        
+        
     </header>
     <main>
-        <section id="contact">
-            <h2>Contato</h2>
-            <form>
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Mensagem:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+        <section id="about">
+            <h2>Sobre Nós</h2>
+            <p>Bem-vindo à Central Hit, onde a batida do seu sonho musical ganha vida!</p>
+
+            <p>Somos apaixonados por criar e compartilhar beats que não apenas preenchem o espaço, mas também tocam o coração e a alma dos artistas. No coração da nossa missão está o compromisso com a qualidade e a originalidade. Cada beat em nosso Pack de Beats Hyperion é meticulosamente elaborado para atender às necessidades dos mais exigentes produtores de trap e drill. Nossa equipe de produtores experientes usa uma combinação de técnicas tradicionais e inovação tecnológica para oferecer sons que elevam qualquer projeto musical.</p>
+
+            <p>Na Central Hit, entendemos que cada artista é único e cada música conta uma história. Por isso, oferecemos uma variedade de batidas que vão desde o trap envolvente até o drill mais agressivo, todas projetadas para ajudar você a criar a trilha sonora perfeita para sua visão criativa.</p>
+
+            <p>Nosso objetivo é ser o seu parceiro confiável na jornada musical, fornecendo não apenas os melhores beats, mas também suporte excepcional. Se você tiver alguma dúvida ou precisar de assistência, nossa equipe está sempre aqui para ajudar.</p>
+
+            <p>Junte-se a nós e descubra como o Pack de Beats Hyperion pode transformar suas produções. Estamos ansiosos para fazer parte da sua história musical e contribuir para o seu sucesso.</p>
+
+            <p>Vamos criar algo incrível juntos!</p>
         </section>
+
     
    
     </main>
@@ -40,5 +52,30 @@
         </a>
         <p>&copy; 2024 Pacote de Batidas de Música</p>
     </footer>
+
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("myDropdown");
+            // Verifica se o dropdown está visível e alterna o estado
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        }
+
+        // Fecha o dropdown se o usuário clicar fora dele
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>
