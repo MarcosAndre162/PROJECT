@@ -6,6 +6,27 @@ body {
     
 }
 
+#intro-tracks{   
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+#intro-packs{   
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+
 #about {
     max-width: 900px;
     margin: 0 auto;
@@ -87,9 +108,9 @@ nav a:hover {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .card {
@@ -104,7 +125,7 @@ nav a:hover {
 }
 
 .card img {
-    width: 100%;
+    width: 150%;
     height: auto;
     border-radius: 20px 20px 0 0; 
 }
@@ -116,7 +137,7 @@ nav a:hover {
     width: 100%;
     padding: 20px 0;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 20px 20px 0 0; 
 }
 
@@ -127,7 +148,7 @@ nav a:hover {
 
 .card_link {
     text-decoration: none;
-    background-color: #50AA5A;
+    background-color: #5d5f5e;
     color: white;
     padding: 10px 20px;
     border-radius: 0 0 20px 20px;
@@ -235,7 +256,7 @@ button:hover {
 
 /* Estilo específico para o botão na página inicial */
 #index #intro button {
-    margin-top: 50px; /* Ajuste conforme necessário */
+    margin-top: 150px; /* Ajuste conforme necessário */
 }
 
 #samples {
