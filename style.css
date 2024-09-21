@@ -27,7 +27,7 @@ body {
 
 nav {
     margin-bottom: -200px;
-    margin-top: -630px;
+    margin-top: -500px;
     position: relative;
     z-index: 0; /* Certifica que o menu está na frente da imagem */
     background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o menu */
