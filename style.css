@@ -1,81 +1,110 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #ebe4e4;
+    background-color: #000000;
     margin: 0;
     padding: 0;
 }
 
 .container {
     position: relative;
-    height: 100vh; /* A altura do container é a altura total da janela */
+    height: 100vh;
     background: rgb(195, 67, 183);
-    background: linear-gradient(184deg, rgba(0, 0, 3, 0.8) 28%, rgba(21, 161, 204, 0.6) 95%, rgba(1, 1, 7, 0.6) 100%);
+    background: linear-gradient(184deg, rgba(0, 0, 3, 0.8) 18%, rgba(21, 161, 204, 0.6) 55%, rgba(1, 5, 10, 0.7) 80%);
     color: var(--cor-segundaria);
     text-align: center;
     height: 580px;
     padding-top: 80px;
 }
 
-.titulo {
+.titulo1 {
     font-family: 'Bree Serif', serif;
-    font-size: 8vw; /* Tamanho dinâmico, ajusta-se à tela */
+    font-size: 2.5rem;
     text-align: center;
-    margin-top: 80px;
-    
+    margin-top: 150px;
+    letter-spacing: 0.1em;
 }
 
 
-nav {
-    margin-bottom: -200px;
-    margin-top: -500px;
-    position: relative;
-    z-index: 0; /* Certifica que o menu está na frente da imagem */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o menu */
-    padding: 40px; /* Espaçamento interno do menu */
-}
 
 .menu-content {
-    display: none; /* Inicialmente escondido */
+    display: none;
 }
 
 .hamburger {
-    cursor: pointer; /* Altera o cursor ao passar o mouse */
-    color: white; /* Cor do ícone do menu */
-    font-size: 24px; /* Tamanho do ícone */
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.menu-content {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    position:absolute;
+    top: 13px;
+    left: 120px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+   
+}
+
+.search-bar .tags {
+    display: flex;
+}
+
+.search-bar .tags span {
+    background-color: #ddd;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 20px;
 }
 
 .menu-content a {
-    color: white; /* Cor dos links do menu */
-    text-decoration: none; /* Remove sublinhado dos links */
-    display: block; /* Faz cada link ocupar uma linha inteira */
-    padding: 10px; /* Espaçamento interno dos links */
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
 }
 
 .dropdown-content {
-    display: none; /* Inicialmente escondido */
+    display: none;
 }
-#intro-tracks{   
+
+#intro-tracks {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   
 }
 
-#intro-packs{   
+#intro-packs {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   
 }
 
-
-#about {
+#sobre {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
@@ -84,60 +113,42 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#about h2 {
+#sobre h2 {
     text-align: center;
     color: #333;
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-#about p {
+#sobre p {
     text-align: justify;
     color: #666;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-/* Estilo para o header */
 header {
     height: 100vh;
     color: white;
     padding: 20px;
     text-align: center;
     background-repeat: no-repeat;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-nav {
- 
-    text-align: center;
-}
-
-nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    padding: 10px;
-    display: inline-block;
-}
-
-nav a:hover {
-    background-color: #ffffff;
-    border-radius: 4px;
+    background-color: #000000;
+   
 }
 
 .bem-vindo {
-    width: 100%; /* Define a largura de cada bloco */
+    max-width: 200%;
     font-family: 'Poppins', sans-serif;
-    font-weight: 600; 
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 20px;
-    text-align: center; /* Alinha o texto à esquerda */
+    font-weight: 600;
+    color: #fff9f9;
+    background-color: #000000;
+    padding: 50px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    text-align: center;
     box-shadow: 0 4px 4px rgba(150, 150, 150, 0.1);
 }
-
-
 
 .cards {
     display: grid;
@@ -149,9 +160,9 @@ nav a:hover {
 .card {
     border: 1px solid #000000;
     border-radius: 20px;
-    overflow: hidden; 
+    overflow: hidden;
     background-color: white;
-    position: relative; 
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,7 +171,7 @@ nav a:hover {
 .card img {
     width: 100%;
     height: auto;
-    border-radius: 20px 20px 0 0; 
+    border-radius: 20px 20px 0 0;
 }
 
 .card_title {
@@ -171,7 +182,7 @@ nav a:hover {
     padding: 20px 0;
     text-align: center;
     color: rgb(0, 0, 0);
-    border-radius: 20px 20px 0 0; 
+    border-radius: 20px 20px 0 0;
 }
 
 .card_text {
@@ -189,7 +200,7 @@ nav a:hover {
     width: 100%;
 }
 
-#product-details {
+#detalhes-do-produto {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
@@ -198,20 +209,19 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#product-details h2 {
+#detalhes-do-produto h2 {
     text-align: center;
     color: #333;
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-#product-details p {
+#detalhes-do-produto p {
     text-align: justify;
     color: #666;
     line-height: 1.6;
     margin-bottom: 20px;
 }
-
 
 main {
     padding: 20px;
@@ -221,7 +231,7 @@ section {
     margin-bottom: 20px;
 }
 
-section#samples button {
+section#amostras button {
     display: block;
     margin: 20px auto;
 }
@@ -245,7 +255,7 @@ button:hover {
 
 /* Estilo específico para o botão na página inicial */
 #index #intro button {
-    margin-top: 150px; /* Ajuste conforme necessário */
+    margin-top: 150px;
 }
 
 #samples {
@@ -263,12 +273,11 @@ button:hover {
 }
 
 .beat-sample {
-    width: 60%; /* Define a largura de cada bloco */
-    
+    width: 60%;
     border-radius: 10px;
     padding: 5px;
     margin-bottom: 20px;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -284,14 +293,14 @@ button:hover {
 }
 
 .beat-sample audio {
-    width: 100%; /* Faz o áudio ocupar toda a largura do bloco */
+    width: 100%;
     height: 40px;
     margin-top: 10px;
 }
 
-
 /* Melhorando o formulário de contato */
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -314,15 +323,13 @@ form button:hover {
 }
 
 footer {
-    
     background-color: #1c1c1c;
     color: #fff;
-    padding: 30px 0; /* Espaçamento interno superior e inferior */
-    min-height: 100px; /* Altura mínima do rodapé */
+    padding: 30px 0;
+    min-height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .whatsapp-btn {
@@ -354,90 +361,11 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    header, main, footer {
-        padding: 10px;
+    header h1 {
+        font-size: 10vw;
     }
 
-    .menu-content {
-        display: flex; /* Mostra o menu como flex nas telas maiores */
-        flex-direction: row;
-        justify-content: space-around;
-        position: relative;
-        top: 0;
-        width: auto;
-    }
-    .hamburger {
-        display: none; /* Esconde o ícone do hamburguer em telas maiores */
-    }
-    .dropdown-content {
-        position: absolute;
-        display: none;
-    }
-    .dropdown:hover .dropdown-content {
-        display: block; /* Mostra o dropdown ao passar o mouse */
-    }
-}
-    button {
-        width: 50%;
-        margin-bottom: 20px;
-    }
-
-    audio {
-        width: 100%;
-    }
-
-
-@media (max-width: 412px) {
-    header, main, footer {
-        padding: 10px;
-    }
-
-    .menu-content {
-        display: flex; /* Mostra o menu como flex nas telas maiores */
-        flex-direction: row;
-        justify-content: space-around;
-        position: relative;
-        top: 0;
-        width: auto;
-    }
-    .hamburger {
-        display: none; /* Esconde o ícone do hamburguer em telas maiores */
-    }
-    .dropdown-content {
-        position: absolute;
-        display: none;
-    }
-    .dropdown:hover .dropdown-content {
-        display: block; /* Mostra o dropdown ao passar o mouse */
-    }
-}
-    button {
-        width: 50%;
-        margin-bottom: 20px;
-    }
-
-    audio {
-        width: 100%;
-    }
-    
-    h1, h2 {
-        font-size: 1.5em;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-
-@media (max-width: 1200px) {
-    h1, h2 {
-        font-size: 1.5em;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 10px;
-        align-self: center;
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
