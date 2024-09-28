@@ -12,19 +12,25 @@ body {
     background: linear-gradient(184deg, rgba(0, 0, 3, 0.8) 18%, rgba(21, 161, 204, 0.6) 55%, rgba(1, 5, 10, 0.7) 80%);
     color: var(--cor-segundaria);
     text-align: center;
-    height: 580px;
+    height: 400px;
     padding-top: 80px;
 }
 
 .titulo1 {
     font-family: 'Bree Serif', serif;
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 90px;
     letter-spacing: 0.1em;
 }
 
-
+.tutulo2 {
+    font-family: 'Bree Serif', serif;
+    font-size: 4.5rem;
+    text-align: center;
+    margin-top: 90px;
+    letter-spacing: 0.1em;
+}
 
 .menu-content {
     display: none;
@@ -42,7 +48,7 @@ body {
 .menu-content {
     display: none;
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
+    padding: 16px;
     position: absolute;
     top: 50px;
     left: 10px;
@@ -79,52 +85,86 @@ body {
     color: white;
     text-decoration: none;
     display: block;
-    padding: 10px;
+    padding: 8px 16px;
+    display: block;
+}
+.menu-content a:hover {
+    background-color: #ebebeb;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown-content {
     display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
-#intro-tracks {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.show {
+    display: block;
+}
+
+.show-menu {
+    display: block;
 }
 
 #intro-packs {
     max-width: 1200px;
     margin: 0 auto;
+    color: #ffffff;
     padding: 20px;
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 #sobre {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    z-index: 10;
+    margin-top: -200px;
 }
 
 #sobre h2 {
     text-align: center;
-    color: #333;
+    color: #ffffff;
     font-size: 2em;
     margin-bottom: 20px;
+    z-index: 10;
 }
 
 #sobre p {
     text-align: justify;
-    color: #666;
+    color: #ffffff;
     line-height: 1.6;
     margin-bottom: 20px;
+    z-index: 10;
 }
 
 header {
@@ -137,6 +177,12 @@ header {
    
 }
 
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
 .bem-vindo {
     max-width: 200%;
     font-family: 'Poppins', sans-serif;
@@ -145,9 +191,10 @@ header {
     background-color: #000000;
     padding: 50px;
     margin-bottom: 40px;
-    margin-top: 20px;
+    margin-top: -280px;
     text-align: center;
     box-shadow: 0 4px 4px rgba(150, 150, 150, 0.1);
+    z-index: 10;
 }
 
 .cards {
@@ -155,6 +202,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: 20px;
     padding: 10px;
+   
 }
 
 .card {
@@ -202,70 +250,57 @@ header {
 
 #detalhes-do-produto {
     max-width: 900px;
-    margin: 0 auto;
+    margin:-400px auto 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Define a posição relativa */
+    z-index: 10; 
 }
 
 #detalhes-do-produto h2 {
     text-align: center;
-    color: #333;
-    font-size: 2em;
+    color: #ffffff;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+#detalhes-do-produto h3 {
+    text-align: left;
+    color: #ffffff;
+    font-size: 1em;
     margin-bottom: 20px;
 }
 
 #detalhes-do-produto p {
     text-align: justify;
-    color: #666;
+    color: #b4aeae;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-main {
-    padding: 20px;
-}
-
 section {
     margin-bottom: 20px;
+   
 }
 
 section#amostras button {
     display: block;
     margin: 20px auto;
+   
 }
 
-button {
-    background-color: #1c1c1c;
-    color: #f4f4f4;
-    padding: 10px 25px;
-    border-radius: 5px;
-    border: 2px solid #427eff;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    display: block;
-    margin: 20px auto;
-}
 
-button:hover {
-    background-color: #427eff;
-    color: #fff;
-}
-
-/* Estilo específico para o botão na página inicial */
-#index #intro button {
-    margin-top: 150px;
-}
 
 #samples {
     display: flex;
     max-width: 900px;
     margin: 0 auto;
+    color: #ffffff;
     padding: 20px;
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -274,6 +309,7 @@ button:hover {
 
 .beat-sample {
     width: 60%;
+    color: #ffffff;
     border-radius: 10px;
     padding: 5px;
     margin-bottom: 20px;
@@ -284,12 +320,12 @@ button:hover {
 .beat-sample h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #333;
+    color: #9b8e8e;
 }
 
 .beat-sample p {
     margin: 5px 0;
-    color: #666;
+    color: #ffffff;
 }
 
 .beat-sample audio {
@@ -297,6 +333,29 @@ button:hover {
     height: 40px;
     margin-top: 10px;
 }
+
+.buy-button {
+    max-width: 300px;
+    align-self: center;
+    background-color: #0070ba; /* Azul PayPal */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
+}
+
+.buy-button:hover {
+    background-color: #005a8b; /* Azul mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento no botão ao passar o mouse */
+}
+
+.buy-button:focus {
+    outline: none; /* Remove o contorno padrão ao focar no botão */
+}
+
 
 /* Melhorando o formulário de contato */
 form input,
@@ -321,6 +380,46 @@ form button:hover {
     background-color: #427eff;
     color: #fff;
 }
+
+.programacao {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: transparent;
+}
+
+.programacao h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.dia {
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.evento {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.evento img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.evento-info {
+    flex: 1;
+}
+
+.evento p {
+    margin: 5px 0;
+    margin-right: 80px;
+}
+
 
 footer {
     background-color: #1c1c1c;
