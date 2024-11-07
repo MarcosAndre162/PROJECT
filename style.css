@@ -9,10 +9,10 @@ body {
     position: relative;
     height: 100vh;
     background: rgb(195, 67, 183);
-    background: linear-gradient(184deg, rgba(0, 0, 3, 0.8) 18%, rgba(21, 161, 204, 0.6) 55%, rgba(1, 5, 10, 0.7) 80%);
+    background: linear-gradient(174deg, rgba(0, 0, 3, 0.8) 20%, rgba(21, 161, 204, 0.6) 55%, rgba(1, 5, 10, 0.7) 80%);
     color: var(--cor-segundaria);
     text-align: center;
-    height: 400px;
+    height: 350px;
     padding-top: 80px;
 }
 
@@ -24,7 +24,7 @@ body {
     letter-spacing: 0.1em;
 }
 
-.tutulo2 {
+.titulo2 {
     font-family: 'Bree Serif', serif;
     font-size: 4.5rem;
     text-align: center;
@@ -89,7 +89,7 @@ body {
     display: block;
 }
 .menu-content a:hover {
-    background-color: #ebebeb;
+    background-color: #646464;
 }
 
 .dropdown {
@@ -188,7 +188,6 @@ main {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #fff9f9;
-    background-color: #000000;
     padding: 50px;
     margin-bottom: 40px;
     margin-top: -280px;
@@ -291,8 +290,6 @@ section#amostras button {
    
 }
 
-
-
 #samples {
     display: flex;
     max-width: 900px;
@@ -335,8 +332,14 @@ section#amostras button {
 }
 
 .buy-button {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 20px auto; /* Centraliza e adiciona uma margem acima e abaixo */
+}
+
+.buy-button button {
     max-width: 300px;
-    align-self: center;
     background-color: #0070ba; /* Azul PayPal */
     color: white; /* Cor do texto */
     border: none; /* Sem borda */
@@ -345,16 +348,19 @@ section#amostras button {
     font-size: 16px; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
     transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
+    text-align: center;
 }
 
-.buy-button:hover {
+.buy-button button:hover {
     background-color: #005a8b; /* Azul mais escuro ao passar o mouse */
     transform: scale(1.05); /* Leve aumento no botão ao passar o mouse */
 }
 
-.buy-button:focus {
+.buy-button button:focus {
     outline: none; /* Remove o contorno padrão ao focar no botão */
 }
+
+
 
 
 /* Melhorando o formulário de contato */
@@ -370,7 +376,7 @@ form textarea {
 
 form button {
     background-color: #1c1c1c;
-    color: #f4f4f4;
+    color: white;
     border-radius: 5px;
     border: 2px solid #427eff;
     transition: all 0.3s ease;
@@ -381,13 +387,13 @@ form button:hover {
     color: #fff;
 }
 
-.programacao {
+.feedbacks {
     padding: 20px;
     margin-top: 20px;
     background-color: transparent;
 }
 
-.programacao h3 {
+.feedbacks h3 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #ffffff;
@@ -402,17 +408,21 @@ form button:hover {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #222222;
 }
 
 .evento img {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     margin-right: 20px;
 }
 
 .evento-info {
     flex: 1;
+    margin: 0;
+    font-size: 18px
 }
 
 .evento p {
@@ -423,25 +433,37 @@ form button:hover {
 
 footer {
     background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
     color: #fff;
     padding: 30px 0;
     min-height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+}
+
+footer img[alt="back"] {
+    max-width: 380px; /* Ajuste o valor para o tamanho desejado */
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+footer p {
+    width: 100%; /* Ocupa toda a largura do footer */
+    text-align: center; /* Alinha o texto do copyright à esquerda */
+    margin-top: 10px;
 }
 
 .whatsapp-btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #1c1c1c;
-    color: #fff;
-    border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    color:white;
+    margin-bottom: 50px;
+    width: 100%; /* Ocupa toda a largura do footer */
+    justify-content: flex-start;
 }
 
 .whatsapp-btn img {
