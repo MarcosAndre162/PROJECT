@@ -38,16 +38,51 @@
         </div>
     </header>
     <main>
-        <section id="thank-you">
-            <h2>Obrigado pela sua compra!</h2>
-            <p>Seu download será enviado para seu email em breve.</p>
-        </section>
+
+        <div class="bem-vindo">
+            <h1>Faça ou adquira beats exclusivos </h1>
+            <p><a href="exclusivos.html">Beats exclusivos disponíveis</a></p>
+        </div>
+            
+      
+        <div class="container">
+            <section>
+                <h2>Ouça Nossos Beats Exclusivos</h2>
+                <div class="beat-card">
+                    <img src="assets/images/mariana.silva.png" alt="Imagem do Beat 1">
+                    <div class="beat-info">
+                        <h2>Beat 1 - Golden Era</h2>
+                        <p>Gênero: Trap</p>
+                        <p>Descrição: Um beat intenso com linhas graves poderosas e melodia atmosférica.</p>
+                    </div>
+                    <div class="actions">
+                        <a href="#">Ouvir</a>
+                        <a href="#">Solicitar Exclusividade</a>
+                    </div>
+                </div>
+        
+                <div class="beat-card">
+                    <img src="assets/images/mariana.silva.png" alt="Imagem do Beat 2">
+                    <div class="beat-info">
+                        <h2>Beat 2 - Night Drive</h2>
+                        <p>Gênero: Lo-fi Hip Hop</p>
+                        <p>Descrição: Um beat relaxante perfeito para sessões noturnas de gravação.</p>
+                    </div>
+                    <div class="actions">
+                        <a href="#">Ouvir</a>
+                        <a href="#">Solicitar Exclusividade</a>
+                    </div>
+                </div>
+            </section>
+        
+        </div>
     </main>
     <footer>
         <a href="https://wa.me/seunumero" class="whatsapp-btn">
             <img src="assets/images/whatsapp.png" alt="WhatsApp">
             Contate-nos no WhatsApp
         </a>
+        <img src="assets/images/Captura de tela 2024-11-06 173713logo.jpg" alt="back">
         <p>&copy; 2024 Pacote de Batidas de Música</p>
     </footer>
 
@@ -75,6 +110,18 @@
             }
         }
     </script>
+
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleDropdown() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+</script>
 </body>
 </html>
 
