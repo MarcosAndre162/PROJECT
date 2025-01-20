@@ -15,6 +15,17 @@
         <div class="container">
             <div class="header-content">
                 <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+                <div class="share-container">
+                    <button class="share-btn" onclick="toggleShareOptions()">
+                        <img src="assets/images/share.png" alt="Compartilhar" />
+                    </button>
+                    <div class="share-options" id="shareOptions">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank">Facebook</a>
+                        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                        <a href="https://twitter.com/intent/tweet?url=YOUR_URL" target="_blank">Twitter</a>
+                        <a href="https://api.whatsapp.com/send?text=YOUR_URL" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
                 <div id="menu" class="menu-content">
                     <a href="index.html">Inicio</a>
                     <a href="sobre.html">Sobre nós</a>
@@ -132,10 +143,15 @@
   
     </main>
     <footer>
-        <a href="https://wa.me/seunumero" class="whatsapp-btn">
-            <img src="assets/images/whatsapp.png" alt="WhatsApp">
-            Contate-nos no WhatsApp
-        </a>
+        <div class="social-media">
+            <a href="https://www.instagram.com/seuperfil" target="_blank">
+                <img src="assets/images/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/https://www.facebook.com/share/14z5sfYsbd/
+            " target="_blank">
+                <img src="assets/images/facebook.png" alt="Facebook">
+            </a>
+        </div>
         <img src="assets/images/Captura de tela 2024-11-06 173713logo.jpg" alt="back">
         <p>&copy; 2024 Pacote de Batidas de Música</p>
     </footer>
@@ -198,6 +214,25 @@
     function toggleDropdown() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
+
+    function toggleShareOptions() {
+    const shareOptions = document.getElementById('shareOptions');
+    if (shareOptions.style.display === 'block') {
+        shareOptions.style.display = 'none';
+    } else {
+        shareOptions.style.display = 'block';
+    }
+}
+
+// Para fechar ao clicar fora
+document.addEventListener('click', (e) => {
+    const shareOptions = document.getElementById('shareOptions');
+    const shareBtn = document.querySelector('.share-btn');
+    if (!shareBtn.contains(e.target) && !shareOptions.contains(e.target)) {
+        shareOptions.style.display = 'none';
+    }
+});
+
 </script>
 </body>
 </html>
