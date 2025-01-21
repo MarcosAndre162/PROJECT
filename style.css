@@ -227,7 +227,7 @@ main {
 }
 
 .bem-vindo {
-    max-width: 200%;
+    max-width: 100%;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #fff9f9;
@@ -585,34 +585,55 @@ footer {
     position: relative;
 }
 
-
+footer .siga {
+    margin-bottom: 20px;
+    text-align: center;
+}
 
 footer .social-media {
-    position: absolute;
-    left: 20px; /* Ajuste para espaçamento à esquerda */
-    top: 50%;
-    transform: translateY(-50%); /* Centraliza verticalmente */
     display: flex;
-    gap: 15px; /* Espaçamento entre os ícones */
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+footer .social-media a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
 }
 
 footer .social-media a img {
-    width: 24px; /* Tamanho do ícone */
-    height: 24px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
 }
 
-footer img[alt="back"] {
+footer .back-img {
     max-width: 180px;
+    margin-top: 20px;
+    display: block;
+}
+
+footer .footer-line {
+    width: 90%;
+    height: 1px;
+    background-color: #fff;
     margin: 20px 0;
+    opacity: 0.2; /* Linha suave */
 }
 
 footer p {
     margin: 0;
     font-size: 16px;
+    padding: 10px 0;
 }
 
 .whatsapp-btn {
-    display: inline-flex; /* Define o botão como inline para permitir a centralização */
+    display: inline-flex; /* Define o botão como inline para permitir a centralizaç
     align-items: center; /* Centraliza o conteúdo verticalmente */
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     text-decoration: none; /* Remove o sublinhado */
@@ -640,5 +661,36 @@ footer p {
 
     .cards {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+}
+
+
+/* Responsividade */
+@media (min-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .social-media {
+        align-items: flex-start;
+    }
+
+    footer .back-img {
+        align-self: center; /* Alinha a imagem à direita */
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    footer .back-img {
+        align-self: center; /* Alinha abaixo do social media em telas menores */
+    }
+
+    .bem-vindo {
+        margin-top: -50px; /* Subir o conteúdo em telas menores */
+        padding: 20px; /* Reduzir o espaçamento interno */
+        position: relative; /* Assegurar que o posicionamento é respeitado */
     }
 }
