@@ -37,7 +37,8 @@
                             <div class="dropdown-subcategory">
                                 <strong>Packs</strong>
                             <a href="packs.html">Packs</a>
-                            <a href="beats-excluzivos.html">Beats exclusivos</a>
+                            <a href="beats-encomenda.html">Beats por encomenda</a>
+                            <a href="exclusivos.html">Beats Exclusivos</a>
                             
                         </div>
                     </div>
@@ -74,14 +75,14 @@
     </footer>
 
     <script>
+
+function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+
         function toggleDropdown() {
-            var dropdownContent = document.getElementById("myDropdown");
-            // Verifica se o dropdown está visível e alterna o estado
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
+            document.getElementById("myDropdown").classList.toggle("show");
         }
 
         // Fecha o dropdown se o usuário clicar fora dele

@@ -43,6 +43,14 @@ body {
     color: #31748f;
 }
 
+.titulo4 {
+    font-family: 'Bree Serif', serif;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 10px;
+    letter-spacing: 0.1em;
+    color: #f8f8f8;
+}
 
 .menu-content {
     display: none;
@@ -227,6 +235,19 @@ main {
 }
 
 .bem-vindo {
+    max-width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff9f9;
+    padding: 50px;
+    margin-bottom: 40px;
+    margin-top: -10px;
+    text-align: center;
+    box-shadow: 0 4px 4px rgba(150, 150, 150, 0.1);
+    z-index: 10;
+}
+
+.thank-you {
     max-width: 100%;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -573,6 +594,86 @@ p a:hover {
 .contact-form button:hover {
     background-color: #d35400;
 }
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Contêiner dos beats */
+.beat-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cartão de cada beat */
+.beat-sample {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.beat-sample:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.beat-sample h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.beat-sample p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Áudio */
+.beat-sample audio {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Botão de compra */
+.buy-btn {
+    display: block;
+    margin: 15px 0 0;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: #0070ba;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.buy-btn:hover {
+    background-color: #005a94;
+}
+
 
 footer {
     background-color: #1c1c1c;

@@ -52,42 +52,84 @@
     
     <main>
         <div class="bem-vindo">
-            <h1>Tenha acesso a uma ampla gama de beats dos mais variados gêneros com nossos packs </h1>
+            <h1>Temos mais de 1000 beats dos mais variados estilos disponiveis </h1>
+            <p>Com preços inacreditaveis</p>
         </div>
        
-        <section id="intro-packs">
-            <h2>Packs Disponiveis: 6</h2>
-            <div class="carousel">
-                <button class="arrow left">&#9664;</button>
-                <div class="cards">
-                    <div class="card">
-                        <img src="assets/images/hyperion.jpg" alt="">
-                        <a href="pack-hyperion.html" class="card_link">Acessar</a>
-                    </div>
-                    <div class="card">
-                        <img src="assets/images/trapack.jpg" alt="">
-                        <a href="pack-bigstar.html" class="card_link">Acessar</a>
-                    </div>
-                    <div class="card">
-                        <img src="assets/images/gangFire.jpg" alt="">
-                        <a href="pack-gangfire.html" class="card_link">Acessar</a>
-                    </div>
-                    <div class="card">
-                        <img src="assets/images/criminal.jpg" alt="">
-                        <a href="pack-criminal.html" class="card_link">Acessar</a>
-                    </div>
-                    <div class="card">
-                        <img src="assets/images/loves.jpg" alt="">
-                        <a href="pack-loves.html" class="card_link">Acessar</a>
-                    </div>
-                    <div class="card">
-                        <img src="assets/images/uk.jpg" alt="">
-                        <a href="pack-uk.html" class="card_link">Acessar</a>
-                    </div>
-                </div>
-                <button class="arrow right">&#9654;</button>
-            </div>
-        </section>
+       <div class="search-bar">
+    <input type="text" id="search" placeholder="Procure por gênero ou instrumento (ex.: Piano, Guitarra, Violino)">
+</div>
+<div class="beat-container" id="beatContainer"></div>
+
+<script>
+    // Beats personalizados com prévias específicas
+    const beats = [
+        {
+            id: 1,
+            title: "Melodia do Amanhecer",
+            genre: "Lo-fi",
+            description: "Uma batida relaxante com toque de piano suave.",
+            instrument: "Piano",
+            audio: "assets/audio/melodia-do-amanhecer.wav",
+            price: "10.00"
+        },
+        {
+            id: 2,
+            title: "Ritmo Urbano",
+            genre: "Trap",
+            description: "Uma batida intensa com ênfase em percussão e 808s.",
+            instrument: "Bateria",
+            audio: "assets/audio/ritmo-urbano.wav",
+            price: "15.00"
+        },
+        {
+            id: 3,
+            title: "Jazz Contemporâneo",
+            genre: "Jazz",
+            description: "Saxofone com um toque moderno para cenários elegantes.",
+            instrument: "Saxofone",
+            audio: "assets/audio/jazz-contemporaneo.wav",
+            price: "12.50"
+        }
+        // Adicione mais beats aqui conforme necessário
+    ];
+
+    // Renderizar beats
+    const beatContainer = document.getElementById("beatContainer");
+
+    function renderBeats(filter = "") {
+        beatContainer.innerHTML = "";
+        const filteredBeats = beats.filter(beat => 
+            beat.genre.toLowerCase().includes(filter.toLowerCase()) ||
+            beat.instrument.toLowerCase().includes(filter.toLowerCase()) ||
+            beat.title.toLowerCase().includes(filter.toLowerCase())
+        );
+        filteredBeats.forEach(beat => {
+            const beatSample = document.createElement("div");
+            beatSample.className = "beat-sample";
+            beatSample.innerHTML = `
+                <h3>${beat.title}</h3>
+                <p>Gênero: <strong>${beat.genre}</strong></p>
+                <p>Descrição: ${beat.description}</p>
+                <p>Preço: <strong>R$ ${beat.price}</strong></p>
+                <audio controls>
+                    <source src="${beat.audio}" type="audio/wav">
+                </audio>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=SEU_EMAIL_PAYPAL&item_name=${encodeURIComponent(beat.title)}&amount=${beat.price}&currency_code=BRL" target="_blank">
+                    <button class="buy-btn">Comprar</button>
+                </a>
+            `;
+            beatContainer.appendChild(beatSample);
+        });
+    }
+
+    renderBeats();
+
+    // Filtro dinâmico
+    document.getElementById("search").addEventListener("input", (event) => {
+        renderBeats(event.target.value);
+    });
+</script>
         
 
 		

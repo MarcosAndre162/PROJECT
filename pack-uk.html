@@ -39,7 +39,7 @@
                             <a href="packs.html">Packs</a>
                             <a href="beats-encomenda.html">Beats por encomenda</a>
                             <a href="exclusivos.html">Beats Exclusivos</a>
-                            
+                          
                         </div>
                     </div>
                 </div>
@@ -52,33 +52,36 @@
     <main>
 
         <div class="bem-vindo">
-            <h1>Pack Gang Fire</h1>
+            <h1>Pack Uk</h1>
         </div>
         
         <section id="detalhes-do-produto">
-            <h2>O que é o Pack de Beats Gang Fire?</h2>
-            <p>O Pack de Beats Gang Fire é um conjunto exclusivo de 30 beats profissionais, com os estilos mais ousados, HARD TRAP E BOOMBAP. Clássico E Ousado, beats quentes fora da caixa, que vão te trazer inspiração para novas ideias.</p>
+            <h2>O que é o Pack de Beats Uk?</h2>
+            <p>O Pack de Beats Big Star é um conjunto exclusivo de 20 beats profissionais, com os estilos mais utilizados pelos artistas da cena. Cada beat foi cuidadosamente produzido pensando em trazer o que já funciona na cena e dar espaço para os novos artistas se destacarem.
+            </p>
 
-            <p>Com beats de alta qualidade e uma vibe única, o Pack de Beats Gang Fire é ideal para quem busca diversidade e trazer algo único para suas produções.</p>
+            <p>Com beats de alta qualidade e uma vibe única, o Pack de Beats Big Star é ideal para quem busca o que já funciona e impulsione sua música com maior facilidade.</p>
 
-            <h3>Por que devo adquirir o Pack de Gang Fire?</h3>
-            <p>Ao contrário dos beats gratuitos disponíveis no YouTube, que não permitem monetização, o Pack de Beats Gang Fire oferece segurança para seus lançamentos futuros. Com 30 beats profissionais, suas músicas terão maior alcance e potencial para atrair um público mais amplo, que já está familiarizado com os estilos de beats da cena, ajudando você a alavancar sua carreira musical e viver de sua arte.</p>
+            <h3>Por que devo adquirir o Pack de Beats Big Star?</h3>
+            <p>Ao contrário dos beats gratuitos disponíveis no YouTube, que não permitem monetização, o Pack de Beats Big Star oferece segurança para seus lançamentos futuros. Com 20 beats profissionais, suas músicas terão maior alcance e potencial para atrair um público mais amplo, que já está familiarizado com os estilos de beats da cena, ajudando você a alavancar sua carreira musical e viver de sua arte.</p>
 
-            <h4>Bônus ao adquirir o pack:</h4>
-            <p>Ao comprar o Pack de Beats Gang Fire, você também receberá alguns bônus exclusivos:</p>
+            <h3>Bônus ao adquirir o pack:</h3>
+            <p>Ao comprar o Pack de Beats Big Star, você também receberá alguns bônus exclusivos:
+            </p>
+
             <ul>
                 <li><strong>Presets Vocais Profissionais:</strong> Presets utilizados por grandes artistas para aprimorar sua mixagem vocal.</li>
                 <li><strong>Capas de Álbum:</strong> Diversas capas de álbum personalizáveis para seus lançamentos.</li>
                 <li><strong>Acesso ao Grupo do Telegram:</strong> Conecte-se com outros artistas e profissionais da CentralHit, compartilhe novidades e aproveite promoções exclusivas.</li>
             </ul>
 
-            <h2>Preço Exclusivo do Pack de Beats Gang Fire</h2>
-            <p>Adquira o <strong>Pack de Beats Gang Fire</strong> por apenas <strong>R$ 39,90</strong>. Cada beat individualmente seria vendido por <strong>R$ 100,00</strong>, totalizando <strong>R$ 5.000,00</strong>. Aproveite esta oferta limitada e leve sua carreira a novos patamares!</p>
+            <h2>Preço Exclusivo do Pack de Beats Big Star</h2>
+            <p>Adquira o <strong>Pack de Beats Big Star</strong> por apenas <strong>R$ 19,90</strong>. Cada beat individualmente seria vendido por <strong>R$ 100,00</strong>, totalizando <strong>R$ 5.000,00</strong>. Aproveite esta oferta limitada e leve sua carreira a novos patamares!</p>
 
-            <h2>Direitos de Uso dos Beats do Gan Fire</h2>
+            <h2>Direitos de Uso dos Beats do Pack Big Star</h2>
             <p>Ao adquirir o pack, você terá direitos completos de uso para registrar e monetizar suas músicas, além de poder colaborar com outros artistas, ampliando ainda mais seu impacto no cenário musical.</p>
 
-            <h2>Regras de Uso dos Beats do Pack Gang Fire</h2>
+            <h2>Regras de Uso dos Beats do Pack Big Star</h2>
             <p>Ao publicar ou registrar sua música, é obrigatório usar a tag sonora da CentralHit e incluir a seguinte informação na descrição: <em>Beat por: @CentralHit</em>.</p>
 
            
@@ -238,6 +241,25 @@ document.addEventListener('click', (e) => {
         shareOptions.style.display = 'none';
     }
 });
+
+function toggleShareOptions() {
+    const shareOptions = document.getElementById('shareOptions');
+    if (shareOptions.style.display === 'block') {
+        shareOptions.style.display = 'none';
+    } else {
+        shareOptions.style.display = 'block';
+    }
+}
+
+// Para fechar ao clicar fora
+document.addEventListener('click', (e) => {
+    const shareOptions = document.getElementById('shareOptions');
+    const shareBtn = document.querySelector('.share-btn');
+    if (!shareBtn.contains(e.target) && !shareOptions.contains(e.target)) {
+        shareOptions.style.display = 'none';
+    }
+});
+
 
 </script>
 </body>
