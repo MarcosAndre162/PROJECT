@@ -39,7 +39,7 @@
                             <a href="packs.html">Packs</a>
                             <a href="beats-encomenda.html">Beats por encomenda</a>
                             <a href="exclusivos.html">Beats Exclusivos</a>
-                           
+                            <a href="acervo-beats.html">Beats Promocionais</a>
                         </div>
                     </div>
                 </div>
@@ -57,32 +57,160 @@
         </div>
             
       
-            <section id="samples">
-                <h2>Prévias</h2>
-                
-                <div class="beat-sample">
-                    <h3>Beat 1</h3>
-                    <p>Gênero: <strong>Trap</strong></p>
-                    <p>Descrição: Um beat envolvente com graves pesados e melodias melancólicas.</p>
-                    <audio controls>
-                        <source src="assets/audio/TRAP_TYPE_BEAT_GANGUE.wav" type="audio/wav">
-                        
-                    </audio>
-                </div>
-                
-                <div class="beat-sample">
-                    <h3>Beat 2</h3>
-                    <p>Gênero: <strong>Drill</strong></p>
-                    <p>Descrição: Batida intensa com percussões marcantes e um toque de agressividade.</p>
-                    <audio controls>
-                        <source src="assets/audio/DRILL_TYPE_BEAT_WITH.wav" type="audio/wav">
-                        
-                    </audio>
-                </div>
+        <div class="beat-container" id="beatContainer"></div>
+
+        <script>
+            // Beats personalizados com prévias específicas
+            const beats = [
+                {
+                    id: 1,
+                    title: "Melodia do Amanhecer",
+                    genre: "Lo-fi",
+                    description: "Uma batida relaxante com toque de piano suave.",
+                    instrument: "Piano",
+                    audio: "assets/audio/melodia-do-amanhecer.wav",
+                    price: "100.00"
+                },
+                {
+                    id: 2,
+                    title: "Ritmo Urbano",
+                    genre: "Trap",
+                    description: "Uma batida intensa com ênfase em percussão e 808s.",
+                    instrument: "Bateria",
+                    audio: "assets/audio/ritmo-urbano.wav",
+                    price: "115.00"
+                },
+                {
+                    id: 3,
+                    title: "Jazz Contemporâneo",
+                    genre: "Jazz",
+                    description: "Saxofone com um toque moderno para cenários elegantes.",
+                    instrument: "Saxofone",
+                    audio: "assets/audio/jazz-contemporaneo.wav",
+                    price: "50.50"
+                },
+                {
+                    id: 4,
+                    title: "Jazz Contemporâneo",
+                    genre: "Jazz",
+                    description: "Saxofone com um toque moderno para cenários elegantes.",
+                    instrument: "Saxofone",
+                    audio: "assets/audio/jazz-contemporaneo.wav",
+                    price: "90.50"
+                },
+                {
+                    id: 5,
+                    title: "Jazz Contemporâneo",
+                    genre: "Jazz",
+                    description: "Saxofone com um toque moderno para cenários elegantes.",
+                    instrument: "Saxofone",
+                    audio: "assets/audio/jazz-contemporaneo.wav",
+                    price: "120.50"
+                },
+                {
+                    id: 6,
+                    title: "Jazz Contemporâneo",
+                    genre: "Jazz",
+                    description: "Saxofone com um toque moderno para cenários elegantes.",
+                    instrument: "Saxofone",
+                    audio: "assets/audio/jazz-contemporaneo.wav",
+                    price: "52.50"
+                },
+                {
+                    id: 1,
+                    title: "Melodia do Amanhecer",
+                    genre: "Lo-fi",
+                    description: "Uma batida relaxante com toque de piano suave.",
+                    instrument: "Piano",
+                    audio: "assets/audio/melodia-do-amanhecer.wav",
+                    price: "100.00"
+                },
+                {
+                    id: 2,
+                    title: "Ritmo Urbano",
+                    genre: "Trap",
+                    description: "Uma batida intensa com ênfase em percussão e 808s.",
+                    instrument: "Bateria",
+                    audio: "assets/audio/ritmo-urbano.wav",
+                    price: "150.00"
+                },
+                {
+                    id: 3,
+                    title: "Jazz Contemporâneo",
+                    genre: "Jazz",
+                    description: "Saxofone com um toque moderno para cenários elegantes.",
+                    instrument: "Saxofone",
+                    audio: "assets/audio/jazz-contemporaneo.wav",
+                    price: "121.50"
+                },
+                {
+                    id: 4,
+                    title: "Jazz Contemporâneo",
+                    genre: "Jazz",
+                    description: "Saxofone com um toque moderno para cenários elegantes.",
+                    instrument: "Saxofone",
+                    audio: "assets/audio/jazz-contemporaneo.wav",
+                    price: "91.50"
+                },
+                {
+                    id: 5,
+                    title: "Jazz Contemporâneo",
+                    genre: "Jazz",
+                    description: "Saxofone com um toque moderno para cenários elegantes.",
+                    instrument: "Saxofone",
+                    audio: "assets/audio/jazz-contemporaneo.wav",
+                    price: "42.50"
+                },
+                {
+                    id: 6,
+                    title: "Jazz Contemporâneo",
+                    genre: "Jazz",
+                    description: "Saxofone com um toque moderno para cenários elegantes.",
+                    instrument: "Saxofone",
+                    audio: "assets/audio/jazz-contemporaneo.wav",
+                    price: "28.50"
+                }
+            ];
         
-        </div>
+            // Renderizar beats
+            const beatContainer = document.getElementById("beatContainer");
+        
+            function renderBeats(filter = "") {
+                beatContainer.innerHTML = "";
+                const filteredBeats = beats.filter(beat => 
+                    beat.genre.toLowerCase().includes(filter.toLowerCase()) ||
+                    beat.instrument.toLowerCase().includes(filter.toLowerCase()) ||
+                    beat.title.toLowerCase().includes(filter.toLowerCase())
+                );
+                filteredBeats.forEach(beat => {
+                    const beatSample = document.createElement("div");
+                    beatSample.className = "beat-sample";
+                    beatSample.innerHTML = `
+                        <h3>${beat.title}</h3>
+                        <p>Gênero: <strong>${beat.genre}</strong></p>
+                        <p>Descrição: ${beat.description}</p>
+                        <p>Preço: <strong>R$ ${beat.price}</strong></p>
+                        <audio controls>
+                            <source src="${beat.audio}" type="audio/wav">
+                        </audio>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=SEU_EMAIL_PAYPAL&item_name=${encodeURIComponent(beat.title)}&amount=${beat.price}&currency_code=BRL" target="_blank">
+                            <button class="buy-btn">Comprar</button>
+                        </a>
+                    `;
+                    beatContainer.appendChild(beatSample);
+                });
+            }
+        
+            renderBeats();
+        
+            // Filtro dinâmico
+            document.getElementById("search").addEventListener("input", (event) => {
+                renderBeats(event.target.value);
+            });
+        </script>
     </main>
     <footer>
+        <img src="assets/images/Captura de tela 2024-11-06 173713logo.jpg" alt="back" class="back-img">
         <div class="siga">
             <h3>Siga-nos nas redes sociais</h3>
         </div>
@@ -96,11 +224,10 @@
                 <span>Facebook</span>
             </a>
         </div>
-        <img src="assets/images/Captura de tela 2024-11-06 173713logo.jpg" alt="back" class="back-img">
         <hr class="footer-line">
         <p>&copy; 2024 Pacote de Batidas de Música</p>
     </footer>
-
+    
     <script>
         function toggleDropdown() {
             var dropdownContent = document.getElementById("myDropdown");

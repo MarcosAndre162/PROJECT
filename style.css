@@ -81,6 +81,7 @@ body {
 .share-btn img {
     width: 24px;
     height: 24px;
+    
 }
 
 .share-options {
@@ -714,8 +715,8 @@ footer .social-media a img {
 }
 
 footer .back-img {
-    max-width: 180px;
-    margin-top: 20px;
+    max-width: 240px;
+    margin-top: 80px;
     display: block;
 }
 
