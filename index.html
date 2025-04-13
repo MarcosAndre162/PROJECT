@@ -8,6 +8,9 @@
     <title>Central Hit</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -37,10 +40,10 @@
 
                             <div class="dropdown-subcategory">
                                 <strong>Packs</strong>
-                            <a href="packs.html">Packs</a>
-                            <a href="beats-encomenda.html">Beats por encomenda</a>
-                            <a href="exclusivos.html">Beats Exclusivos</a>
-                            <a href="acervo-beats.html">Beats Promocionais</a>
+                                <a href="packs.html">Packs</a>
+                                <a href="promocao.html">Promoções</a>
+                                <a href="beats-encomenda.html">Beats por encomenda</a>
+                                <a href="exclusivos.html">Beats Exclusivos</a>
                         </div>
                     </div>
                 </div>
@@ -54,17 +57,26 @@
     
     <main>
         <div class="bem-vindo">
-            <h1>Bem vindo à Central Hit, somos especialistas em produzir beats de extrema qualidade</h1>
+            <h1>Bem vindo(a) à Central Hit</h1>
         </div>
-        <div class="titulo3"><a href="acervo-beats.html"><h2>Acesse aqui nosso catálogo de beats, temos beats no valor de R$ 5,00</h2></a></div>
+        <div class="titulo2"><a href="acervo-beats.html"><h2>Acesse aqui nosso catálogo de beats exclusivos</h2></a></div>
         <section id="intro-packs">
             <h2>Em Promoção:</h2>
+            <div class="container-selo">
+                <div class="selo-promocao">
+                  <span>🔥 Corra que a nossa promoção é por pouco tempo! 🔥</span>
+                </div>
+              </div>
             <div class="carousel">
                 <button class="arrow left">&#9664;</button>
                 <div class="cards">
                     <div class="card">
                         <img src="assets/images/hyperior.jpg" alt="">
-                        <a href="promocao.html" class="card_link">R$20,00</a>
+                        <a href="promocao.html" class="card_link">R$29,90</a>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/gang.jpg" alt="">
+                        <a href="promocao.html" class="card_link">R$19,90</a>
                     </div>
                     
                 </div>
@@ -72,10 +84,10 @@
             </div>
         </section>
        
-        <div class="titulo3"><h2>Tenha acesso a beats de alta qualidade com ótimos preços </h2></div>
+       
 
 		 <section class="feedbacks">
-                <h3>feedbacks de clientes: </h3>
+                <h3>feedbacks de artistas que adquiriram nossos packs: </h3>
                 <div class="dia">
                     
                    <img src="assets/images/jonas.jpg" alt="">
@@ -86,7 +98,7 @@
             </section>
 
             <div class="titulo4"><h2>NÃO PERCA TEMPO! ADQUIRA AGORA SEU BEAT OU PACK DE BEATS E SEJA MAS UM DE NOSSOS CLIENTES SATISFEITOS COM O PRODUTO E TAMBÉM COM O RESULTADO</h2></div>
-
+            <div class="titulo2"><a href="packs.html"><h2>Adquira  já seu pack</h2></a></div>
             <a href="https://wa.me/seunumero" class="whatsapp-btn">
                 <img src="assets/images/whatsapp.png" alt="WhatsApp">
                 Contate-nos no WhatsApp
@@ -149,7 +161,7 @@
         prevButton.addEventListener('click', goToPrev);
 
         // Movimento automático
-        setInterval(goToNext, 3000); // Muda de card a cada 3 segundos
+       // setInterval(goToNext, 3000); // Muda de card a cada 3 segundos
 
         function toggleShareOptions() {
     const shareOptions = document.getElementById('shareOptions');
