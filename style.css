@@ -7,18 +7,18 @@ body {
 
 .container {
     position: relative;   
+    text-align: center;
+    min-height: 400px; /* altura mínima base */
+    margin-top: 20px;
+    background-image: url("assets/images/Captura de tela 2024-11-06 173713logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* faz a imagem sempre ocupar todo o espaço */
+}  
    /* background: rgb(198, 69, 185);
     background: linear-gradient(196deg, rgba(0, 0.3, 3, 0.1) 13%, rgba(29, 161, 204, 0.6) 35%, rgba(1, 5, 10, 0.7) 80%);
     color: var(--cor-segundaria);*/
-    text-align: center;
-    min-height: 1200px;
-    margin-top: 20px;
-    background-image: url(assets/images/Central1.jpg);
-    background-repeat: no-repeat;        /* Evita a duplicação */
-    background-position: center 130px; 
-    
    
-}
 
 
 .titulo1 {
@@ -273,7 +273,7 @@ body {
 }
 
 header {
-    height: 100vh;
+    height: 60vh;
     color: white;
     padding: 20px;
     text-align: center;
@@ -283,19 +283,19 @@ header {
 }
 
 main {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     max-width: 1200px;
     margin: 0 auto; /* Centraliza o conteúdo */
 }
 
 .bem-vindo {
-    max-width: 300%;
+    max-width: 250%;
     font-family: 'Poetzer one', 'Quicksand';
     font-size: 30px;
     color: #fff9f9;
     padding: 50px;
-    margin-bottom: 40px;
-    margin-top: -10px;
+    position: relative;
+    top: -40px; /* valor negativo sobe */
     text-align: center;
     box-shadow: 0 4px 4px rgba(150, 150, 150, 0.1);
     z-index: 10;
@@ -867,6 +867,33 @@ footer p {
     background-color: #131313; /* Cor ao passar o mouse */
 }
 
+/* Telas pequenas (celulares) */
+@media (max-width: 768px) {
+    .container {
+        min-height: 250px;
+        background-size: contain;
+        background-position: center 120px; /* mostra mais a parte de cima */
+    }
+}
+
+/* Telas médias (tablets, notebooks menores) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .container {
+        min-height: 400px;
+        background-size: contain;
+        background-position: center center;
+    }
+}
+
+/* Telas grandes (PC/monitores grandes) */
+@media (min-width: 1201px) {
+    .container {
+        min-height: 600px;
+        background-size: contain;
+        background-position: center center; /* mantém centralizado */
+        background-attachment: fixed; /* efeito parallax bonito em PC */
+    }
+}
 
 @media (max-width: 768px) {
     header h1 {
