@@ -273,7 +273,7 @@ body {
 }
 
 header {
-    height: 60vh;
+    height: 80vh;
     color: white;
     padding: 20px;
     text-align: center;
@@ -283,7 +283,7 @@ header {
 }
 
 main {
-    padding: 0 20px 20px 20px;
+    padding: 0 0 20px 20px 20px;
     max-width: 1200px;
     margin: 0 auto; /* Centraliza o conteúdo */
 }
@@ -872,7 +872,7 @@ footer p {
     .container {
         min-height: 250px;
         background-size: contain;
-        background-position: center 120px; /* mostra mais a parte de cima */
+        background-position: center 150px; /* mostra mais a parte de cima */
     }
 }
 
@@ -891,7 +891,6 @@ footer p {
         min-height: 600px;
         background-size: contain;
         background-position: center center; /* mantém centralizado */
-        background-attachment: fixed; /* efeito parallax bonito em PC */
     }
 }
 
@@ -933,8 +932,8 @@ footer p {
     }
 
     .bem-vindo {
-        margin-top: -30px; /* Subir o conteúdo em telas menores */
-        padding: 20px; /* Reduzir o espaçamento interno */
+        margin-top: -100px; /* Subir o conteúdo em telas menores */
+        padding: 10px; /* Reduzir o espaçamento interno */
         position: relative; /* Assegurar que o posicionamento é respeitado */
     }
 
